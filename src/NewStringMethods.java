@@ -1,3 +1,5 @@
+import java.util.Optional;
+
 public class NewStringMethods {
 
     public static void main(String[] args) {
@@ -23,5 +25,11 @@ public class NewStringMethods {
         System.out.println("lines()");
         var multiline = "1\n2\n3\n4";
         multiline.lines().forEach(System.out::println);
+        System.out.println("------------------------");
+
+        System.out.println("Optional::isEmpty()");
+        var opt = Optional.ofNullable(null);
+        System.out.println(opt.isEmpty());
+        System.out.println(opt.isPresent());
     }
 }
