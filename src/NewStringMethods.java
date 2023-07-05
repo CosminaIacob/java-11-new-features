@@ -1,4 +1,6 @@
 import java.util.Optional;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class NewStringMethods {
 
@@ -31,5 +33,10 @@ public class NewStringMethods {
         var opt = Optional.ofNullable(null);
         System.out.println(opt.isEmpty());
         System.out.println(opt.isPresent());
+
+        System.out.println("Predicate::not");
+        Stream<String> strings = Stream.of("string1", "string2", "", "string3");
+        strings.filter(Predicate.not(String::isBlank))
+                .forEach(System.out::println);
     }
 }
