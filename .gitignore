@@ -1,2 +1,4 @@
 # Project exclude paths
 /out/
+/.idea/
+/java-11-new-features.iml
